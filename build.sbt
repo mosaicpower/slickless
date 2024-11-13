@@ -2,7 +2,7 @@ import xerial.sbt.Sonatype.sonatypeCentralHost
 
 name := "slickless"
 organization := "com.mosaicpower"
-version := "0.4.0"
+version := "0.4.1-SNAPSHOT"
 
 scalaVersion := "2.13.15"
 crossScalaVersions := Seq("2.13.15")

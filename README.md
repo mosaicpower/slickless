@@ -1,10 +1,8 @@
 # slickless
 
-[![Build Status](https://travis-ci.org/underscoreio/slickless.svg?branch=master)](https://travis-ci.org/underscoreio/slickless)
-[![codecov](https://codecov.io/gh/underscoreio/slickless/branch/master/graph/badge.svg)](https://codecov.io/gh/underscoreio/slickless)
-[![Join the chat at https://gitter.im/underscoreio/slickless](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/underscoreio/slickless?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Shapeless HList support for Slick. 
 
-Shapeless HList support for Slick.
+This is a fork of [slickless](https://github.com/underscoreio/slickless) to upgrade Slick to 3.5
 
 by [Richard Dallaway][d6y],
 [Miles Sabin][milessabin],
@@ -15,12 +13,11 @@ Licensed [Apache 2][license].
 
 ## Versions
 
-| Scala | Slick    | Slickless |
-|-------|----------|----------|
-| 2.13  | 3.3      | [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.underscore/slickless_2.13/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.underscore/slickless_2.12) |
-| 2.12  | 3.3      | [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.underscore/slickless_2.12/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.underscore/slickless_2.12) |
-| 2.12  | 3.2      | 0.3.3 |
-| 2.11  | 3.1      | 0.3.0 |
+| Scala | Slick | Slickless                                                                                                                                                                                  |
+|-------|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2.13  | 3.5   | 0.4.0                                                                                                                                                                                      |
+
+Note, Slick 3.5 dropped support for Scala 2.12.
 
 ## Getting Started
 
@@ -28,9 +25,9 @@ Grab the code by adding the following to your `build.sbt`:
 
 ~~~
 libraryDependencies ++= Seq(
-  "com.typesafe.slick" %% "slick"     % "3.3.2",
-  "com.chuusai"        %% "shapeless" % "2.3.3",
-  "io.underscore"      %% "slickless" % "<<VERSION>>"
+  "com.typesafe.slick" %% "slick"     % "3.5.1",
+  "com.chuusai"        %% "shapeless" % "2.3.12",
+  "com.mosaicpower"    %% "slickless" % "<<VERSION>>"
 )
 ~~~
 
@@ -87,24 +84,6 @@ the Scala compiler can take a huge amount of time to report an error.
 If your slickless project is taking an insanely long amount of time to compile
 (more than a couple of minutes),
 try to make sure you have the mapping correct before using `<>`.
-
-### Build example without default resolvers
-
-If you need to add resolvers into your build, here's an example:
-
-~~~
-resolvers += "Maven Central" at "https://repo1.maven.org/maven2/"
-
-resolvers += Resolver.sonatypeRepo("releases")
-
-resolvers += Resolver.sonatypeRepo("snapshots")
-
-libraryDependencies ++= Seq(
-  "com.typesafe.slick" %% "slick"     % "3.2.1",
-  "com.chuusai"        %% "shapeless" % "2.3.3",
-  "io.underscore"      %% "slickless" % "0.3.3"
-)
-~~~
 
 ### Publishing
 

@@ -2,10 +2,10 @@ import xerial.sbt.Sonatype.sonatypeCentralHost
 
 name := "slickless"
 organization := "com.mosaicpower"
-version := "0.4.0-SNAPSHOT"
+version := "0.4.0"
 
 scalaVersion := "2.13.15"
-crossScalaVersions := Seq("2.12.20", "2.13.15")
+crossScalaVersions := Seq("2.13.15")
 
 licenses += ("Apache-2.0", url("http://apache.org/licenses/LICENSE-2.0"))
 

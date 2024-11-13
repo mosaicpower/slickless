@@ -1,3 +1,5 @@
+import xerial.sbt.Sonatype.sonatypeCentralHost
+
 name := "slickless"
 organization := "com.mosaicpower"
 version := "0.4.0-SNAPSHOT"
@@ -26,6 +28,11 @@ libraryDependencies ++= Seq(
   "com.h2database" % "h2" % "2.3.232" % Test,
   "ch.qos.logback" % "logback-classic" % "1.5.12" % Test
 )
+
+ThisBuild / sonatypeCredentialHost := sonatypeCentralHost
+ThisBuild / publishConfiguration := publishConfiguration.value.withOverwrite(true)
+ThisBuild / publishLocalConfiguration := publishLocalConfiguration.value.withOverwrite(true)
+ThisBuild / publishTo := sonatypePublishToBundle.value
 
 pomExtra in Global := {
   <url>https://github.com/mosaicpower/slickless</url>

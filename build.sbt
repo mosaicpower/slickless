@@ -2,10 +2,10 @@ import xerial.sbt.Sonatype.sonatypeCentralHost
 
 name := "slickless"
 organization := "com.mosaicpower"
-version := "0.4.1-SNAPSHOT"
+version := "0.5.0"
 
-scalaVersion := "2.13.15"
-crossScalaVersions := Seq("2.13.15")
+scalaVersion := "2.13.16"
+crossScalaVersions := Seq("2.13.16")
 
 licenses += ("Apache-2.0", url("http://apache.org/licenses/LICENSE-2.0"))
 
@@ -22,11 +22,11 @@ scalacOptions ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.typesafe.slick" %% "slick" % "3.5.1",
-  "com.chuusai" %% "shapeless" % "2.3.12",
+  "com.typesafe.slick" %% "slick" % "3.6.0",
+  "com.chuusai" %% "shapeless" % "2.3.13",
   "org.scalatest" %% "scalatest" % "3.2.19" % Test,
   "com.h2database" % "h2" % "2.3.232" % Test,
-  "ch.qos.logback" % "logback-classic" % "1.5.12" % Test
+  "ch.qos.logback" % "logback-classic" % "1.5.18" % Test
 )
 
 ThisBuild / sonatypeCredentialHost := sonatypeCentralHost

@@ -13,9 +13,10 @@ Licensed [Apache 2][license].
 
 ## Versions
 
-| Scala | Slick | Slickless                                                                                                                                                                                  |
-|-------|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2.13  | 3.5   | 0.4.0                                                                                                                                                                                      |
+| Scala | Slick | Slickless    |
+|-------|-------|--------------|
+| 2.13  | 3.5   | 0.4.0        |
+| 2.13  | 3.6   | 0.5.0        |                                                                                 
 
 Note, Slick 3.5 dropped support for Scala 2.12.
 
@@ -25,8 +26,8 @@ Grab the code by adding the following to your `build.sbt`:
 
 ~~~
 libraryDependencies ++= Seq(
-  "com.typesafe.slick" %% "slick"     % "3.5.1",
-  "com.chuusai"        %% "shapeless" % "2.3.12",
+  "com.typesafe.slick" %% "slick"     % "3.6.0",
+  "com.chuusai"        %% "shapeless" % "2.3.13",
   "com.mosaicpower"    %% "slickless" % "<<VERSION>>"
 )
 ~~~
